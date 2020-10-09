@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<students>
+    <student>
+        <id>1234</id>
+        <firstName>timba</firstName>
+        <lastName>gili</lastName>
+        <department>
+            <id>1</id>
+            <name>dept1</name>
+        </department>
+        <hobbies>
+            <hobby>Swimming</hobby>
+            <hobby>Playing</hobby>
+            <hobby>Karate</hobby>
+        </hobbies>
+    </student>
+    <student>
+        <id>3456</id>
+        <firstName>tony</firstName>
+        <lastName>davis</lastName>
+        <department>
+            <id>2</id>
+            <name>dept2</name>
+        </department>
+        <hobbies>
+            <hobby>Gardening</hobby>
+            <hobby>Cricket</hobby>
+            <hobby>Gymanistic</hobby>
+        </hobbies>
+    </student>
+</students>

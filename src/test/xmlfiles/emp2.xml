@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:employees xmlns:ns2="urn:iso:std:iso:20022:tech:xsd:pain.012.001.03">
+    <employee id="11">
+        <firstName>Walter</firstName>
+        <lastName>Collins</lastName>
+        <income>300.62</income>
+        <Company id="company-id11">company-11</Company>
+    </employee>
+    <employee id="12">
+        <firstName>Simon</firstName>
+        <lastName>Collins</lastName>
+        <income>300.62</income>
+        <Company id="company-id12">company-12</Company>
+    </employee>
+</ns2:employees>

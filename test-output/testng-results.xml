@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="2224" started-at="2020-09-28T14:50:39Z" finished-at="2020-09-28T14:50:42Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="2224" started-at="2020-09-28T14:50:39Z" finished-at="2020-09-28T14:50:42Z">
+      <class name="TestCases.java_xml_exceldata">
+        <test-method status="PASS" signature="employeesXmlexceldata_Test1()[pri:0, instance:TestCases.java_xml_exceldata@39aeed2f]" name="employeesXmlexceldata_Test1" duration-ms="2158" started-at="2020-09-28T14:50:39Z" finished-at="2020-09-28T14:50:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- employeesXmlexceldata_Test1 -->
+      </class> <!-- TestCases.java_xml_exceldata -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
