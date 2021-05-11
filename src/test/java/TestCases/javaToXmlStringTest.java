@@ -47,9 +47,9 @@ public class javaToXmlStringTest {
 		employees.getEmployee().add(emp2);
 		
 	//String Documenttype ="xmlns=\"urn:iso:std:iso:20022:tech:xsd:pain.012. 001.03\"";
-		String empXmlFilePath = "C:\\seleniumprojects\\XML_JAVA_Project\\src\\test\\xmlfiles\\emp.xml";
+		String empXmlFilePath = "C:\\AutomationProjects\\XML_marshalling\\XML_marshalling\\src\\test\\xmlfiles\\emp.xml";
 		String employeesXmlTest_1 = Utilities.XmlUtil.marshall(employees,empXmlFilePath);
-		//System.out.println(employeesXmlTest_1);
+		System.out.println(employeesXmlTest_1);
 		
 	}
 	
