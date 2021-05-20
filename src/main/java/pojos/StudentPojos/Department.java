@@ -1,4 +1,4 @@
-package StudentPojos;
+package pojos.StudentPojos;
 
 import javax.xml.bind.annotation.XmlRootElement;
 

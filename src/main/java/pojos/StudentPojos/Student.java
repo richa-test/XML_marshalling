@@ -1,4 +1,4 @@
-package StudentPojos;
+package pojos.StudentPojos;
 
 import java.util.List;
 

@@ -1,14 +1,11 @@
-package EmployeePojos;
+package pojos.EmployeePojos;
 
 import java.util.List;
 
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlNs;
 
-@XmlRootElement(name="employees",namespace="urn:iso:std:iso:20022:tech:xsd:pain.012.001.03")
-//@XmlRootElement(name="employees")
+//@XmlRootElement(name="employees",namespace="urn:iso:std:iso:20022:tech:xsd:pain.012.001.03")
+@XmlRootElement(name="employees")
 public class Employees {
 	
 

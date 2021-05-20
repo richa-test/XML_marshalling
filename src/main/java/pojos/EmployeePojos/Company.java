@@ -1,4 +1,4 @@
-package EmployeePojos;
+package pojos.EmployeePojos;
 
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlValue;

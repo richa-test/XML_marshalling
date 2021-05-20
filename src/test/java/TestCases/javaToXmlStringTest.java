@@ -5,15 +5,15 @@ import java.util.Arrays;
 
 import org.testng.annotations.Test;
 
-import EmployeePojos.Company;
+import pojos.EmployeePojos.Company;
 
 //import javax.xml.bind.Marshaller;
 
-import EmployeePojos.Employee;
-import EmployeePojos.Employees;
-import StudentPojos.Department;
-import StudentPojos.Student;
-import StudentPojos.Students;
+import pojos.EmployeePojos.Employee;
+import pojos.EmployeePojos.Employees;
+import pojos.StudentPojos.Department;
+import pojos.StudentPojos.Student;
+import pojos.StudentPojos.Students;
 
 
 public class javaToXmlStringTest {
@@ -47,8 +47,10 @@ public class javaToXmlStringTest {
 		employees.getEmployee().add(emp2);
 		
 	//String Documenttype ="xmlns=\"urn:iso:std:iso:20022:tech:xsd:pain.012. 001.03\"";
-		String empXmlFilePath = "C:\\AutomationProjects\\XML_marshalling\\XML_marshalling\\src\\test\\xmlfiles\\emp.xml";
-		String employeesXmlTest_1 = Utilities.XmlUtil.marshall(employees,empXmlFilePath);
+		//String empXmlFilePath = "C:\\AutomationProjects\\XML_marshalling\\XML_marshalling\\src\\test\\xmlfiles\\emp.xml";
+		String strdateTime = utilities.DateFunctions.getFormattedCurrentDate("ddMMyyyyhhmmss");
+		String empXmlFilePath = System.getProperty("user.dir") + "\\src\\test\\resources\\testResults\\xmlfiles\\emp"+strdateTime+".xml";
+		String employeesXmlTest_1 = utilities.XmlUtil.marshall(employees,empXmlFilePath);
 		System.out.println(employeesXmlTest_1);
 		
 	}
@@ -82,7 +84,7 @@ public class javaToXmlStringTest {
 		students.getStudent().add(student2);
 		
 		String stdXmlFilePath = "C:\\seleniumprojects\\XML_JAVA_Project\\src\\test\\xmlfiles\\student.xml";
-		String studentXmlTest_1 = Utilities.XmlUtil.marshall(students,stdXmlFilePath);
+		String studentXmlTest_1 = utilities.XmlUtil.marshall(students,stdXmlFilePath);
 				
 	}
 	

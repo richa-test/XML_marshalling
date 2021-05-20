@@ -8,10 +8,9 @@ import javax.xml.bind.Unmarshaller;
 
 import org.testng.annotations.Test;
 
-import EmployeePojos.Employee;
-import EmployeePojos.Employees;
-import StudentPojos.Student;
-import StudentPojos.Students;
+import pojos.EmployeePojos.Employee;
+import pojos.EmployeePojos.Employees;
+import pojos.StudentPojos.Students;
 
 public class xmlStringToJavaTest {
 	

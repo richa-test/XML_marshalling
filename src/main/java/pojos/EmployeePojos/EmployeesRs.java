@@ -1,4 +1,4 @@
-package EmployeePojos;
+package pojos.EmployeePojos;
 
 public class EmployeesRs {
 }

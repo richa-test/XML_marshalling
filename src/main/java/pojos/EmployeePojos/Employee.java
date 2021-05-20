@@ -1,4 +1,4 @@
-package EmployeePojos;
+package pojos.EmployeePojos;
 
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
@@ -17,6 +17,10 @@ public class Employee {
 	    private String lastName;
 	    private String income;
 	    private Company company;
+
+
+
+
 	    
 	    @XmlAttribute
 	    public String getId() {
@@ -57,5 +61,6 @@ public class Employee {
 		public void setCompany(Company company) {
 			this.company = company;
 		}
-		
+
+
 }
