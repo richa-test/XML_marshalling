@@ -8,6 +8,7 @@ import payloadgeneration.DepartmentsPayload;
 import utilities.ExcelUtil;
 
 import java.io.File;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -56,12 +57,23 @@ public class departmentTest  extends BaseClass {
         if(!destinationFile.exists()){
             FileUtils.copyFile(sourceFile, destinationFile);
         }
+        DecimalFormat df = new DecimalFormat("#.00");
+        double totalAmount = 0;
 
         for(int i = 0 ;i < updatedDeptDataList.size();i++){
             HashMap<String,String> deptDataUpdatedHashMap = updatedDeptDataList.get(i);
             String deptName = deptDataUpdatedHashMap.get("DepartmentName");
+            String recoveryMnthAmt = deptDataUpdatedHashMap.get("RecoveryMonthlyAmt");
+
+            double recoveryAmount = 0;
+            recoveryAmount = recoveryAmount + Float.parseFloat(recoveryMnthAmt);
+            totalAmount = totalAmount+ Float.parseFloat(recoveryMnthAmt);
+            System.out.println(" recoveries--->"+df.format(recoveryAmount));
+
             ExcelUtil.writeResultForSpecifiedColumn(finalTestResultsFilePath,deptDataSheetName,"DepartmentName",deptName,deptDataUpdatedHashMap);
         }
+
+        System.out.println(" totalAmount--->"+df.format(totalAmount));
 
     }
 

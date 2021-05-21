@@ -240,6 +240,44 @@ public class ExcelUtil {
         return testDataHashMapForTestCase;
     }
 
+    /**
+     Description: the method is used to get append rows existing excel file**/
+
+
+    public static void writeToExcelAppending(String filePath,String sheetName,HashMap<String,String> dataHashMap) throws Exception{
+        FileInputStream fileInputStream = new FileInputStream(new File(filePath));
+        XSSFWorkbook workbook = new XSSFWorkbook(fileInputStream);
+        XSSFSheet sheet = workbook.getSheet(sheetName);
+        Map<String,Integer> testDataColumnsHashMap = new HashMap<String,Integer>();
+/** below code is to get the column index in excel file for the column names in hashmap**/
+        XSSFRow row = sheet.getRow(0);
+        int totalRows = sheet.getLastRowNum();
+        int rowCount = ++totalRows;
+
+        short minColIndx = row.getFirstCellNum();
+        short maxColIndx = row.getLastCellNum();
+        for (short colIndx = minColIndx;colIndx < maxColIndx; colIndx ++){
+            XSSFCell cell = row.getCell(colIndx );//headercell
+            testDataColumnsHashMap.put(cell.getStringCellValue(),cell.getColumnIndex());
+        }
+/** below code is to write the data to excel file as per column as in hasmap and excel file **/
+        int columnIndexToWrite;
+        sheet.createRow(rowCount);
+        for(Map.Entry<String,String> entry:dataHashMap.entrySet()){
+            String key = entry.getKey();
+            String value = entry.getValue();
+//get column index to write
+            columnIndexToWrite = testDataColumnsHashMap.get(key);
+            XSSFCell writeToCell = sheet.getRow(rowCount).createCell(columnIndexToWrite);
+            writeToCell.setCellValue(value);
+        }
+        FileOutputStream fos = new FileOutputStream(filePath);
+        workbook.write(fos);
+        fos.close();
+        workbook.close();
+        fileInputStream.close();
+    }
+
 
 
 

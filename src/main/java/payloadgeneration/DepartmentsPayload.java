@@ -69,8 +69,6 @@ public class DepartmentsPayload {
         marshaller.setProperty("com.sun.xml.bind.xmlDeclaration",Boolean.FALSE);
         marshaller.setProperty("com.sun.xml.bind.xmlHeaders","<?xml version=\"1.0\"?>");
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-
-
         marshaller.marshal(document,outputStream);
         payload = new String(outputStream.toByteArray());
         Path path = Paths.get(fileLocation+"\\"+fileName);

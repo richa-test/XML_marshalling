@@ -11,6 +11,9 @@ public class BaseClass {
     public static String testDataRelativePath  = null;
     public static String testResultsRelativePath  = null;
     public String employeeTestDataFileName = null;
+    public String dbUrl = null;
+    public String dbUserName = null;
+    public String dbPassword = null;
 
     public void executionProperties() throws IOException{
         projLocation = System.getProperty("user.dir");
@@ -26,11 +29,17 @@ public class BaseClass {
         if(env.equalsIgnoreCase("QA")){
             testDataRelativePath  = projLocation+"\\src\\test\\resources\\testData\\QA\\";
             testResultsRelativePath = projLocation+"\\src\\test\\resources\\testResults\\QA\\";
+            dbUrl = prop.getProperty("qa_activeDbURL");
+            dbUserName = prop.getProperty("qa_activeDBUsername");
+            dbPassword = prop.getProperty("qa_activeDBPassword");
         }
 
         if(env.equalsIgnoreCase("DEV")){
             testDataRelativePath  = projLocation+"\\src\\test\\resources\\testData\\DEV\\";
             testResultsRelativePath = projLocation+"\\src\\test\\resources\\testResults\\DEV\\";
+            dbUrl = prop.getProperty("dev_activeDbURL");
+            dbUserName = prop.getProperty("dev_activeDBUsername");
+            dbPassword = prop.getProperty("dev_activeDBPassword");
         }
 
         employeeTestDataFileName = prop.getProperty("employeeTestDataFileName");
